@@ -1,0 +1,66 @@
+name: Test & Lint
+
+on:
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    cache_npm:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3.5.3
+            - name: Cache node modules
+              id: cache-npm
+              uses: actions/cache@v3.3.1
+              with:
+                  # npm cache files are stored in `node_modules` on Linux/macOS
+                  path: |
+                      node_modules
+                  # Generate a new cache whenever packages or source files change.
+                  key: ${{ runner.os }}-portfolionextjs-${{ hashFiles('**/package-lock.json') }}
+                  # If source files changed but packages didn't, rebuild from a prior cache.
+                  restore-keys: |
+                      ${{ runner.os }}-portfolionextjs-${{ hashFiles('**/package-lock.json') }}-
+
+            - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
+              name: Install new cache
+              # without this, list will fail on first run
+              continue-on-error: true
+              run: |
+                  echo "${{ steps.cache-npm.outputs.cache-hit }}"
+                  echo "${{ runner.os }}-portfolionextjs-${{ hashFiles('**/package-lock.json') }}"
+                  npm ci
+    test:
+        needs: cache_npm
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3.5.3
+            - name: Setup node
+              uses: actions/setup-node@v3.7.0
+            - uses: actions/cache@v3.3.1
+              with:
+                  path: |
+                      node_modules
+                  key: ${{ runner.os }}-portfolionextjs-${{ hashFiles('**/package-lock.json') }}
+            - run: |
+                  echo ${{ runner.os }}-portfolionextjs-${{ hashFiles('**/package-lock.json') }}
+                  npm run test
+    lint:
+        needs: cache_npm
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [16]
+        steps:
+            - uses: actions/checkout@v3.5.3
+            - name: Setup node
+              uses: actions/setup-node@v3.7.0
+            - uses: actions/cache@v3.3.1
+              with:
+                  path: |
+                      node_modules
+                  key: ${{ runner.os }}-portfolionextjs-${{ hashFiles('**/package-lock.json') }}
+            - run: |
+                  echo ${{ runner.os }}-portfolionextjs-${{ hashFiles('**/package-lock.json') }}
+                  npm run lint
