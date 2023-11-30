@@ -2,7 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+@font-face {
+    font-family: "Poppins";
+    src: url("../../public/fonts/poppins-light-webfont.woff");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../../public/fonts/poppins-regular-webfont.woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../../public/fonts/poppins-semibold-webfont.woff");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../../public/fonts/poppins-bold-webfont.woff");
+    font-weight: 700;
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +60,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
