@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.1.0...v1.1.1) (2023-11-30)
+
+
+### :zap: Refactoring
+
+* **hoempage:** minify background image ([7044918](https://github.com/gurnzbot/portfolio-nextjs/commit/70449189e5598cb8066b046df8de7cb3e424f6a2))
+
 ## [1.1.0](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.0.0...v1.1.0) (2023-11-30)
 
 
