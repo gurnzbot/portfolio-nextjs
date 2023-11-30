@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.0.0...v1.1.0) (2023-11-30)
+
+
+### :sparkles: Features
+
+* **homepage:** site intro laid out with typing animation ([71e14dc](https://github.com/gurnzbot/portfolio-nextjs/commit/71e14dc234c3ad01a8289b0545a002528976353e))
+
 ## 1.0.0 (2023-11-29)
 
 
