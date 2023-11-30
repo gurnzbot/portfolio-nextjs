@@ -22,8 +22,8 @@ function ComputerWritingAnimation({ text }: Props) {
     }, [text, index]);
 
     return (
-        <div className="flex align-bottom text-xl font-inconsolata text-amber-300">
-            {writtenText}
+        <div className="flex align-bottom text-xl font-inconsolata text-amber-300 text-center">
+            <span className="line-clamp-1">{writtenText}</span>
             <div className="inline-flex h-[1.4em] w-1 bg-slate-300 ml-1 animate-cursor" />
         </div>
     );

@@ -17,6 +17,9 @@ const config: Config = {
       },
       animation: {
         cursor: "cursor infinite 800ms"
+      },
+      screens: {
+        xs: '383px'
       }
     },
   },
