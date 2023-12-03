@@ -19,7 +19,7 @@ function About() {
                     <h1 className="font-inconsolata text-3xl sm:text-5xl text-center text-slate-600 tracking-tighter">Attention, humans!</h1>
 
                     <div className="flex flex-col gap-4 pt-6 text-xl text-slate-500 leading-8 text-center xs:text-justify">
-                        <div>My name is Erik Gurney. I'm an experienced web developer based in Essex Ontario, Canada. I excel at the frontend UI/UX experience, and I thoroughly enjoy ensuring the user has a great experience. I'm no stranger to the backend and the full-stack experience, having done it for 10+ years ;&#41;</div>
+                        <div>My name is Erik Gurney. I&apos;m an experienced web developer based in Essex Ontario, Canada. I excel at the frontend UI/UX experience, and I thoroughly enjoy ensuring the user has a great experience. I&apos;m no stranger to the backend and the full-stack experience, having done it for 10+ years ;&#41;</div>
                         <div>Besides all that, I really enjoy the musical side of life, playing some Zelda, and thoroughly embarrasing my wife and 2 kids.</div>
                     </div>
 
