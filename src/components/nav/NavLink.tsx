@@ -29,7 +29,7 @@ function NavLink({ href, children, ...props }: Props) {
 
     // Cannot use Nextjs <Link>, as Next uses history.push() for links and those are not hash change events.  A normal <a> tag must be used.
     return (
-        <a {...props} className={`flex h-full items-center text-lg py-3 transition-all duration-0 hover:duration-150 ${active ? "text-amber-300" : "text-white hover:text-amber-300"} ${props.className}`} href={href}>
+        <a {...props} className={`flex h-full items-center text-lg pt-3 pb-2 transition-all duration-0 hover:duration-150 ${active ? "text-amber-300" : "text-white hover:text-amber-300"} ${props.className}`} href={href}>
             {children}
         </a>
     );
