@@ -2,7 +2,7 @@ import ComputerWritingAnimation from "@/src/components/ComputerWritingAnimation"
 
 function Intro() {
     return (
-        <div id="intro" className="flex flex-1 min-h-screen max-h-[800px]">
+        <div id="intro" className="flex flex-1 min-h-screen h-[800px] snap-start">
             <div className="flex flex-1 flex-col justify-center items-center text-white bg-intro bg-center bg-cover">
                 <div className="flex w-full flex-col justify-center items-center bg-black/60 py-4 px-4">
                     <ComputerWritingAnimation text={`console.log("Hello world!");`} />
