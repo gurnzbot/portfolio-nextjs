@@ -8,7 +8,6 @@ import { GiHamburgerMenu } from "react-icons/gi";
 // * Components
 import NavLink from "@/src/components/nav/NavLink";
 import NavIcon from "@/src/components/nav/NavIcon";
-import useUnderScreenSize from "@/src/hooks/useUnderScreenSize";
 
 function Navigation() {
     const [dropdownShown, setDropdownShown] = useState(false);
