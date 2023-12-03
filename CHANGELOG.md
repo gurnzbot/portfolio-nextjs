@@ -1,3 +1,32 @@
+## [1.2.0](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.1.2...v1.2.0) (2023-12-03)
+
+
+### :sparkles: Features
+
+* **about:** finish up basic section content and layout ([c1b73ad](https://github.com/gurnzbot/portfolio-nextjs/commit/c1b73adc91f6c120edd8bf318803da661fad949e))
+
+
+### :bug: Bug Fixes
+
+* **about:** use html char for apostrophe ([2efda35](https://github.com/gurnzbot/portfolio-nextjs/commit/2efda35ff1e736546206d5a2dbeb826f491f9a29))
+* **homepage:** html character was incorrectly defined ([2f94836](https://github.com/gurnzbot/portfolio-nextjs/commit/2f94836dafd8af2b85edeee3f8bbea81a727b5c6))
+* **nav:** set initial active link via useEffect due to hash ([a0ba154](https://github.com/gurnzbot/portfolio-nextjs/commit/a0ba1543ea0f7ef0d8f141fa836e08ed0297860f))
+
+
+### :zap: Refactoring
+
+* **layout:** create components for page sections (and new nav) ([920efb4](https://github.com/gurnzbot/portfolio-nextjs/commit/920efb42a1a2caa5724a4672de02bebee5c3f403))
+
+
+### :repeat: CI/CD
+
+* **test:** remove test run ([60da1ee](https://github.com/gurnzbot/portfolio-nextjs/commit/60da1ee36a48993e649527eef80db26179e1184f))
+
+
+### chores
+
+* **imports:** use alias for import statement ([8978bd1](https://github.com/gurnzbot/portfolio-nextjs/commit/8978bd14a535df7dd36983e4f897b783ef19d2aa))
+
 ## [1.1.2](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.1.1...v1.1.2) (2023-11-30)
 
 
