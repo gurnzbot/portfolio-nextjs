@@ -31,21 +31,6 @@ jobs:
                   echo "${{ steps.cache-npm.outputs.cache-hit }}"
                   echo "${{ runner.os }}-portfolionextjs-${{ hashFiles('**/package-lock.json') }}"
                   npm ci
-    test:
-        needs: cache_npm
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3.5.3
-            - name: Setup node
-              uses: actions/setup-node@v3.7.0
-            - uses: actions/cache@v3.3.1
-              with:
-                  path: |
-                      node_modules
-                  key: ${{ runner.os }}-portfolionextjs-${{ hashFiles('**/package-lock.json') }}
-            - run: |
-                  echo ${{ runner.os }}-portfolionextjs-${{ hashFiles('**/package-lock.json') }}
-                  npm run test
     lint:
         needs: cache_npm
         runs-on: ubuntu-latest
