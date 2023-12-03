@@ -19,7 +19,11 @@ const config: Config = {
         cursor: "cursor infinite 800ms"
       },
       screens: {
-        xs: '383px'
+        xs: '383px',
+        'resp-nav': '550px'
+      },
+      transitionProperty: {
+        'max-height': 'max-height'
       }
     },
   },
