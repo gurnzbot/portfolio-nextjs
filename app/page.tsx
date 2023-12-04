@@ -2,6 +2,7 @@
 import Intro from "@/src/components/sections/Intro";
 import About from "@/src/components/sections/About";
 import Navigation from "@/src/components/nav/Navigation";
+import Experience from "@/src/components/sections/Experience";
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             <Navigation />
             <Intro />
             <About />
+            <Experience />
         </main>
     );
 }
