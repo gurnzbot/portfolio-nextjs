@@ -1,3 +1,31 @@
+## [1.3.0](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.2.0...v1.3.0) (2023-12-04)
+
+
+### :sparkles: Features
+
+* **about:** add resume and contact link ([60244cb](https://github.com/gurnzbot/portfolio-nextjs/commit/60244cb3cda3d68dfcb9fe61e90d344a00b8439f))
+* add custom favicon ([5ad1ae2](https://github.com/gurnzbot/portfolio-nextjs/commit/5ad1ae20a5584fb0218259512ffd1102b07029f6))
+* **nav:** first attempt at responsive nav ([bcea2d9](https://github.com/gurnzbot/portfolio-nextjs/commit/bcea2d9ab03fb25047e1bce80a5340ccbd90cec6))
+
+
+### :bug: Bug Fixes
+
+* **layout:** custom min-w not working with tailwind, so hard style used ([fab1e64](https://github.com/gurnzbot/portfolio-nextjs/commit/fab1e640d8db61efbddcdda4c26e2987b0bc0a3a))
+* **nav:** remove unused import ([7ac2483](https://github.com/gurnzbot/portfolio-nextjs/commit/7ac2483f88a4d7e756d89635e3cdac8c26981563))
+
+
+### :zap: Refactoring
+
+* **nav:** attempt fancy schmancy responsive resizing ([1554cf4](https://github.com/gurnzbot/portfolio-nextjs/commit/1554cf41fa35e094fbd17cdcf3a9261d8ccf0e57))
+* **nav:** use simple show/hide nav ([982a591](https://github.com/gurnzbot/portfolio-nextjs/commit/982a591e212ed3cdfa47a3598cf387d4ef0844a4))
+* **nav:** use single nav element with max height to control animation ([d54d980](https://github.com/gurnzbot/portfolio-nextjs/commit/d54d9803d5169489f92ca248296d71c3739f3c1d))
+
+
+### chores
+
+* **css:** remove zombie css ([b025089](https://github.com/gurnzbot/portfolio-nextjs/commit/b025089321ede3123e66aa5be414dfdb8983f12b))
+* **tailwind:** format config ([8c5ac8e](https://github.com/gurnzbot/portfolio-nextjs/commit/8c5ac8e891c8af1337b5d55e786b062dc854698e))
+
 ## [1.2.0](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.1.2...v1.2.0) (2023-12-03)
 
 
