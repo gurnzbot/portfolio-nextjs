@@ -5,7 +5,12 @@ import Navigation from "@/src/components/nav/Navigation";
 
 export default function Home() {
     return (
-        <main className="flex flex-col flex-1 min-h-screen min-w-[300px] scroll-smooth snap-y">
+        <main
+            style={{
+                minWidth: "300px",
+            }}
+            className="flex flex-col flex-1 min-h-screen scroll-smooth snap-y"
+        >
             <Navigation />
             <Intro />
             <About />
