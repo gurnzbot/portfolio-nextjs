@@ -1,14 +1,14 @@
 "use client";
 
 // * Lib
-import { useCallback, useEffect, useState } from "react";
+import { AnchorHTMLAttributes, useCallback, useEffect, useState } from "react";
 
-type Props = {
+type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
     href: string;
     children: React.ReactNode;
 };
 
-function NavLink({ href, children }: Props) {
+function NavLink({ href, children, ...props }: Props) {
     const [active, setActive] = useState(false);
 
     const hashChange = useCallback(() => {
@@ -29,7 +29,7 @@ function NavLink({ href, children }: Props) {
 
     // Cannot use Nextjs <Link>, as Next uses history.push() for links and those are not hash change events.  A normal <a> tag must be used.
     return (
-        <a className={`flex items-center text-lg py-2 transition-all duration-0 hover:duration-150 ${active ? "text-amber-300" : "text-white hover:text-amber-300"}`} href={href}>
+        <a {...props} className={`flex h-full items-center text-lg pt-3 pb-2 transition-all duration-0 hover:duration-150 ${active ? "text-amber-300" : "text-white hover:text-amber-300"} ${props.className}`} href={href}>
             {children}
         </a>
     );
