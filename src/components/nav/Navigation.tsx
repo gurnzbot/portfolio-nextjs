@@ -1,7 +1,7 @@
 "use client";
 
 // * Lib
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { FaGithub, FaStackOverflow } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -24,11 +24,11 @@ function Navigation() {
                         <GiHamburgerMenu />
                     </button>
                     <nav>
-                        <ul className="hidden resp-nav:flex resp-nav:gap-5">
+                        <ul className={`flex flex-col resp-nav:flex-row resp-nav:gap-5 overflow-hidden transition-max-height duration-300 ${dropdownShown ? "max-h-[400px]" : "max-h-0 resp-nav:max-h-none"}`}>
                             <li>
                                 <NavLink href="#intro">Intro</NavLink>
                             </li>
-                            <li>
+                            <li className="[&>*]:pb-4 resp-nav:[&>*]:pb-2">
                                 <NavLink href="#about">About</NavLink>
                             </li>
                         </ul>
@@ -53,17 +53,6 @@ function Navigation() {
                     </li>
                 </ul>
             </div>
-
-            <nav className={`${dropdownShown ? "flex" : "hidden"} resp-nav:hidden w-full px-10`}>
-                <ul className="flex flex-col">
-                    <li className="flex [&>*]:pb-1">
-                        <NavLink href="#intro">Intro</NavLink>
-                    </li>
-                    <li className="flex [&>*]:pb-4">
-                        <NavLink href="#about">About</NavLink>
-                    </li>
-                </ul>
-            </nav>
         </div>
     );
 }
