@@ -26,7 +26,7 @@ function About() {
                             <div>Besides all that, I really enjoy the musical side of life, playing some Zelda, and thoroughly embarrasing my wife and 2 kids.</div>
                         </div>
 
-                        <div className="flex flex-col lg:flex-row gap-6 text-slate-600 mt-12">
+                        <div className="flex flex-col lg:flex-row gap-10 text-slate-600 mt-12">
                             <div className="flex lg:w-1/2 flex-col gap-4">
                                 <h3 className="w-full font-inconsolata font-bold text-2xl text-slate-900">My Contact Info</h3>
 
@@ -47,7 +47,7 @@ function About() {
                                             github.com/gurnzbot
                                         </ContactLink>
                                     </div>
-                                    <div className="overflow-hidden">
+                                    <div>
                                         <label className="text-lg font-bold">Stackoverflow:</label>
                                         <ContactLink Icon={FaStackOverflow} href="https://stackoverflow.com/users/1803539/gurnzbot">
                                             stackoverflow.com/users/1803539/gurnzbot
@@ -73,11 +73,11 @@ function About() {
                             </div>
                         </div>
 
-                        <div className="flex flex-col md:flex-row justify-center gap-6 mt-12">
-                            <a href="#contact" className="flex flex-1 min-w-[250px] md:flex-initial items-center justify-center text-center px-10 py-3 font-bold text-amber-500 rounded-lg border-2 border-amber-500 hover:border-amber-600 hover:text-amber-600 hover:bg-amber-50 active:scale-110 duration-100 ease-in-out">
+                        <div className="flex flex-col md:flex-row justify-center gap-10 mt-12">
+                            <a href="#contact" className="flex flex-1 md:min-w-[250px] md:flex-initial items-center justify-center text-center px-10 py-3 font-bold text-amber-500 rounded-lg border-2 border-amber-500 hover:border-amber-600 hover:text-amber-600 hover:bg-amber-50 active:scale-110 duration-100 ease-in-out">
                                 Hire Me!
                             </a>
-                            <a href="/downloads/Erik%20Gurney%20-%202023.pdf" download="Erik Gurney.pdf" className="flex flex-1 min-w-[250px] md:flex-initial items-center justify-center text-center px-10 py-3 font-semibold text-white rounded-lg bg-amber-500 hover:bg-amber-600 active:scale-110 duration-100 ease-in-out">
+                            <a href="/downloads/Erik%20Gurney%20-%202023.pdf" download="Erik Gurney.pdf" className="flex flex-1 md:min-w-[250px] md:flex-initial items-center justify-center text-center px-10 py-3 font-semibold text-white rounded-lg bg-amber-500 hover:bg-amber-600 active:scale-110 duration-100 ease-in-out">
                                 Download my Resume
                             </a>
                         </div>

@@ -11,7 +11,7 @@ function ContactLink({ Icon, children, ...props }: Props) {
             <span className="mt-1 text-lg opacity-70">
                 <Icon />
             </span>
-            <span className="text-ellipsis overflow-hidden">{children}</span>
+            <span className=" text-ellipsis overflow-hidden">{children}</span>
         </a>
     );
 }
