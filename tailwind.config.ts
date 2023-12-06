@@ -17,6 +17,7 @@ const config: Config = {
             screens: {
                 xs: "383px",
                 "resp-nav": "550px",
+                timeline: "900px",
             },
             transitionProperty: {
                 "max-height": "max-height",

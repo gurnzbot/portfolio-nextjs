@@ -1,7 +1,9 @@
-// * Lib
-import { TbCodeDots } from "react-icons/tb";
-
 // * Components
+import CompanyTitle from "@/src/components/sections/Experience/CompanyTitle";
+import WorkDescription from "./Experience/WorkDescription";
+import WorkIcon from "./Experience/WorkIcon";
+import WorkSection from "./Experience/WorkSection";
+import WorkTitle from "./Experience/WorkTitle";
 
 function Experience() {
     return (
@@ -14,44 +16,26 @@ function Experience() {
 
                 <div className="text-lg text-slate-800 leading-8 text-center xs:text-justify">Come with me an a journey from a sole-programmer developing completely custom PHP websites from scratch for a wide variety of clients, to a Wordpress Developer creating custom plugins as part of a fullfillment team. All along the adventure, making dedicated stops as a React developer creating internal IP and Saas-focused projects, and even working on a highly-stylized mobile app with React Native. Lately I've been blessed as a Team Lead, mentoring a team of wonderful developers along the Agile path.</div>
 
-                <div className="relative flex flex-col gap-10 before:contents-[''] before:absolute before:right-1/2 before:mr-2 before:top-0 before:bottom-0 before:border-l before:border-black">
-                    {/* Work wrapper */}
-                    <div className="relative flex flex-col md:flex-row gap-28 justify-between text-slate-800">
-                        {/* Icon */}
-                        <div className="absolute top-0 right-1/2 -mr-4 flex justify-center items-start">
-                            <div className="flex justify-center items-center p-3 rounded-full bg-slate-700 text-white text-2xl">
-                                <TbCodeDots />
-                            </div>
-                        </div>
+                <div className="relative flex flex-col gap-16 pl-20 timeline:pl-0 before:contents-[''] before:absolute before:left-6 timeline:before:left-auto timeline:before:right-1/2 timeline:before:mr-[7px] before:top-0 before:bottom-0 before:border-l-2 before:border-slate-500">
+                    <WorkSection>
+                        <WorkIcon />
+                        <WorkTitle title="Web Developer &ndash; Team Lead" timePeriod="2019 &ndash; current" />
 
-                        {/* Location & time period */}
-                        <div className="flex flex-col md:w-1/2 items-end">
-                            <div className="text-xl font-semibold">Web Developer &ndash; Team Lead</div>
-                            <div className="text-slate-600">2019 &ndash; current</div>
-                        </div>
+                        <WorkDescription>
+                            <CompanyTitle>Clear Com Media</CompanyTitle>
+                            <div>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</div>
+                        </WorkDescription>
+                    </WorkSection>
 
-                        {/* Description */}
-                        <div className="md:w-1/2">Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</div>
-                    </div>
+                    <WorkSection>
+                        <WorkIcon />
+                        <WorkTitle title="Web Developer" timePeriod="2009 &ndash; 2019" />
 
-                    {/* Work wrapper */}
-                    <div className="relative flex flex-col md:flex-row gap-28 justify-between text-slate-800">
-                        {/* Icon */}
-                        <div className="absolute top-0 right-1/2 -mr-4 flex justify-center items-start">
-                            <div className="flex justify-center items-center p-3 rounded-full bg-slate-700 text-white text-2xl">
-                                <TbCodeDots />
-                            </div>
-                        </div>
-
-                        {/* Location & time period */}
-                        <div className="flex flex-col md:w-1/2 items-end">
-                            <div className="text-xl font-semibold">Web Developer &ndash; Team Lead</div>
-                            <div className="text-slate-600">2019 &ndash; current</div>
-                        </div>
-
-                        {/* Description */}
-                        <div className="md:w-1/2">Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</div>
-                    </div>
+                        <WorkDescription>
+                            <CompanyTitle>Digital Media</CompanyTitle>
+                            <div>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</div>
+                        </WorkDescription>
+                    </WorkSection>
                 </div>
             </div>
         </div>
