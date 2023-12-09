@@ -17,7 +17,7 @@ function NavLink({ href, children, ...props }: Props) {
 
     useEffect(() => {
         hashChange();
-    }, [href]);
+    }, [hashChange]);
 
     useEffect(() => {
         window.addEventListener("hashchange", hashChange);
