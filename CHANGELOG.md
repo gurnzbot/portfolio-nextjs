@@ -1,3 +1,23 @@
+## [1.4.0](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.3.0...v1.4.0) (2023-12-09)
+
+
+### :sparkles: Features
+
+* **experience:** initial layout & blurb ([5621c29](https://github.com/gurnzbot/portfolio-nextjs/commit/5621c29eee7b11d7383817e0debdacfda32a2186))
+* **experience:** timeline layout ([b1ea07a](https://github.com/gurnzbot/portfolio-nextjs/commit/b1ea07a838cbda9f7b5d9ab0058bc6136356ea80))
+
+
+### :bug: Bug Fixes
+
+* **experience:** html chars ([7de46ec](https://github.com/gurnzbot/portfolio-nextjs/commit/7de46ec3c2f3bddb716d5e8bcb50110fca99e113))
+* **navigation:** useEffect dependency issue ([23999ed](https://github.com/gurnzbot/portfolio-nextjs/commit/23999ed4ded3da60dea9679a25dd21cd9180e010))
+
+
+### :zap: Refactoring
+
+* **experience:** component-based responsive timeline ([6a98c58](https://github.com/gurnzbot/portfolio-nextjs/commit/6a98c5863dbee5a2937cbafbc3a85f9dbc1f69ff))
+* **experience:** flesh out content ([4e97fd8](https://github.com/gurnzbot/portfolio-nextjs/commit/4e97fd8212a503525d8e5550a89e4b91c383ad5f))
+
 ## [1.3.0](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.2.0...v1.3.0) (2023-12-04)
 
 
