@@ -33,7 +33,7 @@ function Experience() {
                             <div className="flex flex-col gap-4 leading-relaxed text-slate-600">
                                 <div>I jumped head-first into the world of Wordpress when I began here. The plugins and customizations I wrote covered everything from robust custom layouts with full administration, to external API integration and subscription models.</div>
                                 <div>Once the company broadened the scope of work, I brought React to the team and we were off and running! Next.js, Redux, Zustand, Tailwind, Typescript, Nestjs, and React Native all come into play, making going into work a joy :D</div>
-                                <div>Not too long after I began, I was given the opportunity to lead the development team. This has been a great part of my career, and it's a role which I'm looking to continue with.</div>
+                                <div>Not too long after I began, I was given the opportunity to lead the development team. This has been a great part of my career, and it&apos;s a role which I&apos;m looking to continue with.</div>
                             </div>
                         </WorkDescription>
                     </WorkSection>
@@ -60,7 +60,7 @@ function Experience() {
                             <CompanyTitle>Nemak</CompanyTitle>
                             <div className="flex flex-col gap-4 leading-relaxed text-slate-600">
                                 <div>Fresh out of college, I had the opportunity to develop simulations and provide productivity insight for a sizable engine-block factory.</div>
-                                <div>Although not web-development, this time in my career allowed me to see how talented members of a team don't rely on their abilities alone. They pay great attention to detail and strive hard to improve along the way. These are valuable lessons for a young person, and I continue to pull inspiration from this time.</div>
+                                <div>Although not web-development, this time in my career allowed me to see how talented members of a team don&apos;t rely on their abilities alone. They pay great attention to detail and strive hard to improve along the way. These are valuable lessons for a young person, and I continue to pull inspiration from this time.</div>
                             </div>
                         </WorkDescription>
                     </WorkSection>
