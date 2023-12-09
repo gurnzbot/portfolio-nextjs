@@ -28,22 +28,25 @@ function Navigation() {
                             <li>
                                 <NavLink href="#intro">Intro</NavLink>
                             </li>
-                            <li className="[&>*]:pb-4 resp-nav:[&>*]:pb-2">
+                            <li>
                                 <NavLink href="#about">About</NavLink>
                             </li>
-                            <li className="[&>*]:pb-4 resp-nav:[&>*]:pb-2">
+                            <li>
                                 <NavLink href="#experience">Experience</NavLink>
+                            </li>
+                            <li className="[&>*]:pb-4 resp-nav:[&>*]:pb-2">
+                                <NavLink href="#contact">Contact</NavLink>
                             </li>
                         </ul>
                     </nav>
                 </div>
 
                 <ul className="flex gap-6">
-                    <li className="flex">
+                    {/* <li className="flex">
                         <NavIcon href="http://google.ca">
                             <FaGithub />
                         </NavIcon>
-                    </li>
+                    </li> */}
                     <li className="flex">
                         <NavIcon href="https://github.com/gurnzbot">
                             <FaGithub />
