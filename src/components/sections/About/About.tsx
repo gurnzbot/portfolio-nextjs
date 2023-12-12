@@ -12,7 +12,7 @@ import FlatButton from "@/src/components/buttons/FlatButton";
 function About() {
     return (
         <div id="about" className="flex flex-col min-h-screen py-20 px-14 sm:px-32 justify-center snap-start">
-            <div className="flex flex-1 flex-col gap-4 max-w-6xl overflow-hidden">
+            <div className="flex flex-1 flex-col gap-4 max-w-6xl">
                 <div className="flex flex-col justify-center">
                     <h5 className="text-3xl text-center text-amber-600 font-bold uppercase">About</h5>
                     <h1 className="font-inconsolata text-3xl sm:text-5xl text-center text-slate-600 tracking-tighter">Attention, humans!</h1>
@@ -74,18 +74,18 @@ function About() {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <div className="flex flex-1 flex-col gap-4 max-w-6xl">
-                <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-10 mt-12">
-                    <OutlineButton as="link" href="#contact">
-                        Hire Me!
-                    </OutlineButton>
-                    <FlatButton as="link" href="/downloads/Erik%20Gurney%20-%202023.pdf" download="Erik Gurney.pdf">
-                        Download my Resume
-                    </FlatButton>
+                        <div className="flex flex-col gap-4 max-w-6xl items-center">
+                            <div className="flex flex-1 flex-col md:flex-row justify-center gap-6 md:gap-10 mt-12">
+                                <OutlineButton as="link" href="#contact">
+                                    Hire Me!
+                                </OutlineButton>
+                                <FlatButton as="link" href="/downloads/Erik%20Gurney%20-%202023.pdf" download="Erik Gurney.pdf">
+                                    Download my Resume
+                                </FlatButton>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
