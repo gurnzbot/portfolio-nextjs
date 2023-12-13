@@ -3,7 +3,7 @@ import Intro from "@/src/components/sections/Intro";
 import About from "@/src/components/sections/About/About";
 import Navigation from "@/src/components/nav/Navigation";
 import Experience from "@/src/components/sections/Experience/Experience";
-import Contact from "@/src/components/sections/Contact";
+import Contact from "@/src/components/sections/Contact/Contact";
 
 export default function Home() {
     return (
