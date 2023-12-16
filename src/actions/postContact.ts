@@ -6,6 +6,7 @@ import { Resend } from "resend";
 
 // * Utils
 import { ContactFormSchema } from "@/src/utils/ContactFormSchema";
+import { EmailTemplate } from "../components/EmailTemplate";
 
 type Inputs = z.infer<typeof ContactFormSchema>;
 
@@ -25,11 +26,12 @@ const postContact = async (data: Inputs) => {
 
         // Send email!
         const emailResp = await resend.emails.send({
-            from: "onboarding@resend.dev",
+            from: "Erik GUrney <onboarding@resend.dev>",
             // from: "contact@erikgurney.com",
             to: "erik.gurney@hotmail.com",
             subject: `Contact | erikgurney.com: ${parsedData.data.name}`,
-            html: `<p>${parsedData.data.message}</p>`,
+            react: EmailTemplate(parsedData.data),
+            text: `${parsedData.data.name}\n${parsedData.data.email}\n${parsedData.data.message}`,
         });
 
         // Check for email error

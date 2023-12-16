@@ -1,7 +1,6 @@
 "use client";
 
 // TODO: hide form for awhile once submit is complete
-// TODO: ensure email is populated as expected using a template
 
 // * Lib
 import { useState } from "react";
