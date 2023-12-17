@@ -29,6 +29,7 @@ const postContact = async (data: Inputs) => {
             from: "Erik GUrney <onboarding@resend.dev>",
             // from: "contact@erikgurney.com",
             to: "erik.gurney@hotmail.com",
+            reply_to: parsedData.data.email,
             subject: `Contact | erikgurney.com: ${parsedData.data.name}`,
             react: EmailTemplate(parsedData.data),
             text: `${parsedData.data.name}\n${parsedData.data.email}\n${parsedData.data.message}`,
