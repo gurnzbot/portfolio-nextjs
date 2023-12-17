@@ -1,6 +1,6 @@
 "use client";
 
-// TODO: hide form for awhile once submit is complete
+// TODO: bg image
 
 // * Lib
 import { useState } from "react";
@@ -18,14 +18,21 @@ import postContact from "@/src/actions/postContact";
 
 type Inputs = z.infer<typeof ContactFormSchema>;
 
+const submissionThresholdMinutes = 30;
+
 function Contact() {
     const [submitError, setSubmitError] = useState<string>();
     const [isLoading, setIsLoading] = useState(false);
 
+    const [lastSubmissionTime, setLastSubmissionTime] = useState(parseInt(localStorage.getItem("lastSubmissionTime") || "0"));
+    const canSubmit = lastSubmissionTime < submissionThresholdMinutes * 60 * 1000;
+
+    const [formAnimationClasses, setFormAnimationClasses] = useState(canSubmit ? "opacity-100 z-10" : "opacity-0");
+    const [messageAnimationClasses, setMessageAnimationClasses] = useState(canSubmit ? "opacity-0 -translate-y-2 -z-10" : "opacity-100 translate-y-0");
+
     const {
         register,
         handleSubmit,
-        reset,
         formState: { errors },
     } = useForm<Inputs>({
         resolver: zodResolver(ContactFormSchema),
@@ -52,30 +59,44 @@ function Contact() {
             return;
         }
 
-        reset();
+        // Set submission time
+        const currentTime = new Date().getTime();
+        setLastSubmissionTime(currentTime);
+        localStorage.setItem("lastSubmissionTime", currentTime.toString());
+
+        // Animate form & success message transition
+        setMessageAnimationClasses("opacity-100 translate-y-0 z-10");
+        setFormAnimationClasses("opacity-0 -z-10");
     };
 
     return (
-        <div id="contact" className="flex min-h-screen py-20 px-14 sm:px-32 justify-center snap-start bg-neutral-800 text-white">
-            <div className="flex flex-1 flex-col max-w-3xl justify-center">
+        <div id="contact" className="flex min-h-screen py-40 px-14 sm:px-32 justify-center snap-start bg-neutral-800 text-white">
+            <div className="flex flex-1 flex-col max-w-3xl">
                 <div className="flex flex-col justify-center mb-16 lg:mb-10">
                     <h2 className="text-3xl text-center text-amber-500 font-bold uppercase">Contact</h2>
                     <h2 className="font-inconsolata text-3xl sm:text-xl text-center text-slate-300 tracking-tighter">I&apos;d love to hear from you!</h2>
                 </div>
 
-                <form onSubmit={handleSubmit(submitForm)} className="flex flex-col gap-12">
-                    <div className="flex flex-1 flex-col gap-8">
-                        <FormInput register={register("name")} name="name" label="Name" errors={errors} disabled={isLoading} />
-                        <FormInput register={register("email")} name="email" label="Email" type="email" errors={errors} disabled={isLoading} />
-                        <FormInput register={register("message")} name="message" label="Message" errors={errors} isTextarea disabled={isLoading} />
+                <div className="relative">
+                    <form onSubmit={handleSubmit(submitForm)} className={`flex flex-col gap-12 transition-all duration-300 ease-in-out ${formAnimationClasses}`}>
+                        <div className="flex flex-1 flex-col gap-8">
+                            <FormInput register={register("name")} name="name" label="Name" errors={errors} disabled={isLoading} />
+                            <FormInput register={register("email")} name="email" label="Email" type="email" errors={errors} disabled={isLoading} />
+                            <FormInput register={register("message")} name="message" label="Message" errors={errors} isTextarea disabled={isLoading} />
+                        </div>
+
+                        {submitError && <div className="bg-red-500 px-5 py-1 rounded text-white">{submitError}</div>}
+
+                        <FlatButton as="button" loading={isLoading}>
+                            Submit
+                        </FlatButton>
+                    </form>
+
+                    <div className={`absolute top-5 left-0 right-0 flex flex-col gap-2 mt-10 transition-all delay-300 duration-500 ease-in-out ${messageAnimationClasses}`}>
+                        <div className="text-4xl text-amber-200 text-center">Thank you for getting ahold of me!!</div>
+                        <div className="text-xl text-white text-center">I&apos;ll be sure to check my email and get back to you shortly.</div>
                     </div>
-
-                    {submitError && <div className="bg-red-500 px-5 py-1 rounded text-white">{submitError}</div>}
-
-                    <FlatButton as="button" loading={isLoading}>
-                        Submit
-                    </FlatButton>
-                </form>
+                </div>
             </div>
         </div>
     );
