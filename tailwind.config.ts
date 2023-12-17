@@ -16,7 +16,7 @@ const config: Config = {
             },
             screens: {
                 xs: "383px",
-                "resp-nav": "550px",
+                "resp-nav": "630px",
                 timeline: "900px",
             },
             transitionProperty: {
