@@ -2,7 +2,7 @@
 
 // * Lib
 import { useState } from "react";
-import { FaGithub, FaStackOverflow } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaStackOverflow } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 // * Components
@@ -28,11 +28,14 @@ function Navigation() {
                             <li>
                                 <NavLink href="#intro">Intro</NavLink>
                             </li>
-                            <li className="[&>*]:pb-4 resp-nav:[&>*]:pb-2">
+                            <li>
                                 <NavLink href="#about">About</NavLink>
                             </li>
-                            <li className="[&>*]:pb-4 resp-nav:[&>*]:pb-2">
+                            <li>
                                 <NavLink href="#experience">Experience</NavLink>
+                            </li>
+                            <li className="[&>*]:pb-4 resp-nav:[&>*]:pb-2">
+                                <NavLink href="#contact">Contact</NavLink>
                             </li>
                         </ul>
                     </nav>
@@ -40,8 +43,8 @@ function Navigation() {
 
                 <ul className="flex gap-6">
                     <li className="flex">
-                        <NavIcon href="http://google.ca">
-                            <FaGithub />
+                        <NavIcon href="https://www.linkedin.com/in/erikgurney/">
+                            <FaLinkedin />
                         </NavIcon>
                     </li>
                     <li className="flex">

@@ -6,10 +6,12 @@ import { TbWorld } from "react-icons/tb";
 
 // * Components
 import ContactLink from "@/src/components/sections/About/ContactLink";
+import OutlineButton from "@/src/components/buttons/OutlineButton";
+import FlatButton from "@/src/components/buttons/FlatButton";
 
 function About() {
     return (
-        <div id="about" className="flex min-h-screen py-20 px-14 sm:px-32 justify-center snap-start">
+        <div id="about" className="flex flex-col min-h-screen py-20 px-14 sm:px-32 justify-center snap-start">
             <div className="flex flex-1 flex-col gap-4 max-w-6xl">
                 <div className="flex flex-col justify-center">
                     <h5 className="text-3xl text-center text-amber-600 font-bold uppercase">About</h5>
@@ -30,7 +32,7 @@ function About() {
                             <div className="flex lg:w-1/2 flex-col gap-4">
                                 <h3 className="w-full font-inconsolata font-bold text-2xl text-slate-900">My Contact Info</h3>
 
-                                <div className="flex flex-col gap-4">
+                                <div className="flex flex-col gap-4 over">
                                     <div>
                                         <label className="text-lg font-bold">Email:</label>
                                         <ContactLink Icon={MdOutlineEmail} href="mailto:erik.gurney@hotmail.com">
@@ -73,13 +75,15 @@ function About() {
                             </div>
                         </div>
 
-                        <div className="flex flex-col md:flex-row justify-center gap-10 mt-12">
-                            <a href="#contact" className="flex flex-1 md:min-w-[250px] md:flex-initial items-center justify-center text-center px-10 py-3 font-bold text-amber-500 rounded-lg border-2 border-amber-500 hover:border-amber-600 hover:text-amber-600 hover:bg-amber-50 active:scale-110 duration-100 ease-in-out">
-                                Hire Me!
-                            </a>
-                            <a href="/downloads/Erik%20Gurney%20-%202023.pdf" download="Erik Gurney.pdf" className="flex flex-1 md:min-w-[250px] md:flex-initial items-center justify-center text-center px-10 py-3 font-semibold text-white rounded-lg bg-amber-500 hover:bg-amber-600 active:scale-110 duration-100 ease-in-out">
-                                Download my Resume
-                            </a>
+                        <div className="flex flex-col gap-4 max-w-6xl items-center">
+                            <div className="flex flex-1 flex-col md:flex-row justify-center gap-6 md:gap-10 mt-12">
+                                <OutlineButton as="link" href="#contact">
+                                    Hire Me!
+                                </OutlineButton>
+                                <FlatButton as="link" href="/downloads/Erik%20Gurney%20-%202023.pdf" download="Erik Gurney.pdf">
+                                    Download my Resume
+                                </FlatButton>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,9 +1,9 @@
 // * Components
 import CompanyTitle from "@/src/components/sections/Experience/CompanyTitle";
-import WorkDescription from "./Experience/WorkDescription";
-import WorkIcon from "./Experience/WorkIcon";
-import WorkSection from "./Experience/WorkSection";
-import WorkTitle from "./Experience/WorkTitle";
+import WorkDescription from "@/src/components/sections/Experience/WorkDescription";
+import WorkIcon from "@/src/components/sections/Experience/WorkIcon";
+import WorkSection from "@/src/components/sections/Experience/WorkSection";
+import WorkTitle from "@/src/components/sections/Experience/WorkTitle";
 
 function Experience() {
     return (
