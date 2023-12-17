@@ -1,3 +1,35 @@
+## [1.5.0](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.4.0...v1.5.0) (2023-12-17)
+
+
+### :sparkles: Features
+
+* **contact:** implement email template component ([b46d2ad](https://github.com/gurnzbot/portfolio-nextjs/commit/b46d2ad0d78281151b96a8e2a50a491d69092ab7))
+* **contact:** implement Resend and improve Buttons ([ff6edef](https://github.com/gurnzbot/portfolio-nextjs/commit/ff6edeffc49f9ad74ce144642e2033daec3a846a))
+* **contact:** implement zod, react-hook-form, and server action ([dfd7b00](https://github.com/gurnzbot/portfolio-nextjs/commit/dfd7b001aa89c9977e8a48385bc746ff0d4f207d))
+* **contact:** layout "Contact" section ([a2f15b4](https://github.com/gurnzbot/portfolio-nextjs/commit/a2f15b444807af998ec0e32537aff8692c9dca84))
+* **intro:** make background fixed parallax ([55935a2](https://github.com/gurnzbot/portfolio-nextjs/commit/55935a22e7c25a405fa2de73450e4730e27b034a))
+* **nav:** add linkedIn link ([034a39b](https://github.com/gurnzbot/portfolio-nextjs/commit/034a39b9ff920973f4c56de118f796b96495d287))
+
+
+### :bug: Bug Fixes
+
+* **about:** bottom button layout issue ([ef2ecac](https://github.com/gurnzbot/portfolio-nextjs/commit/ef2ecac3f93d6086acc318495c6eff303ad3470a))
+* **about:** text overflow issue ([496ed97](https://github.com/gurnzbot/portfolio-nextjs/commit/496ed97aa7a30d2337a83d2e87dbe8bc981f9a98))
+
+
+### :zap: Refactoring
+
+* **buttons:** create reusable button components ([9dac8dd](https://github.com/gurnzbot/portfolio-nextjs/commit/9dac8dde8fc49a7cc2e1353d3073ee71f252665f))
+* **contact:** add "reply_to" when emailing ([2a390bd](https://github.com/gurnzbot/portfolio-nextjs/commit/2a390bdb7609f1876d3ab47b430e17c75771e395))
+* **contact:** add parallax background to section ([2465d36](https://github.com/gurnzbot/portfolio-nextjs/commit/2465d36f9c8b09fb5c524455c24ac51374d24b16))
+* **contact:** form success state ([ebd5add](https://github.com/gurnzbot/portfolio-nextjs/commit/ebd5add48c1a89e3c878d01992bdeafd2f72bb05))
+
+
+### chores
+
+* **css:** remove zombie code ([0e0485d](https://github.com/gurnzbot/portfolio-nextjs/commit/0e0485dd2c00678b585f60a34e4590ba6496a03c))
+* **npm:** add tailwind-merge ([5a8bd99](https://github.com/gurnzbot/portfolio-nextjs/commit/5a8bd998598b43a5f81195166b659fe77be32a78))
+
 ## [1.4.0](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.3.0...v1.4.0) (2023-12-09)
 
 
