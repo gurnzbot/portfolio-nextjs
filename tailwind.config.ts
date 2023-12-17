@@ -10,6 +10,7 @@ const config: Config = {
             },
             backgroundImage: {
                 intro: "url('/images/homepage-bg-min.png')",
+                contact: "url('/images/contact-bg.jpg')",
             },
             animation: {
                 cursor: "cursor infinite 800ms",

@@ -1,7 +1,5 @@
 "use client";
 
-// TODO: bg image
-
 // * Lib
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -25,7 +23,8 @@ function Contact() {
     const [isLoading, setIsLoading] = useState(false);
 
     const [lastSubmissionTime, setLastSubmissionTime] = useState(parseInt(localStorage.getItem("lastSubmissionTime") || "0"));
-    const canSubmit = lastSubmissionTime < submissionThresholdMinutes * 60 * 1000;
+    const currentTime = new Date().getTime();
+    const canSubmit = currentTime - lastSubmissionTime >= submissionThresholdMinutes * 60 * 1000;
 
     const [formAnimationClasses, setFormAnimationClasses] = useState(canSubmit ? "opacity-100 z-10" : "opacity-0");
     const [messageAnimationClasses, setMessageAnimationClasses] = useState(canSubmit ? "opacity-0 -translate-y-2 -z-10" : "opacity-100 translate-y-0");
@@ -70,8 +69,9 @@ function Contact() {
     };
 
     return (
-        <div id="contact" className="flex min-h-screen py-40 px-14 sm:px-32 justify-center snap-start bg-neutral-800 text-white">
-            <div className="flex flex-1 flex-col max-w-3xl">
+        <div id="contact" className="relative flex min-h-screen py-40 px-14 sm:px-32 justify-center snap-start bg-contact bg-cover bg-center bg-fixed text-white">
+            <div className="absolute top-0 bottom-0 left-0 right-0 z-0 bg-black opacity-90" />
+            <div className="flex flex-1 flex-col max-w-3xl z-10">
                 <div className="flex flex-col justify-center mb-16 lg:mb-10">
                     <h2 className="text-3xl text-center text-amber-500 font-bold uppercase">Contact</h2>
                     <h2 className="font-inconsolata text-3xl sm:text-xl text-center text-slate-300 tracking-tighter">I&apos;d love to hear from you!</h2>
