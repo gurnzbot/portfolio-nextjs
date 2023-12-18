@@ -18,7 +18,7 @@ import Spinner from "../../Spinner";
 
 type Inputs = z.infer<typeof ContactFormSchema>;
 
-const submissionThresholdMinutes = 1;
+const submissionThresholdMinutes = 30;
 
 function Contact() {
     const { sectionRef } = useSectionObserver({ name: "contact" });
