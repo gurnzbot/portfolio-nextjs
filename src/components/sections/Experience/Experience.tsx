@@ -29,7 +29,7 @@ function Experience() {
                     Lately I&apos;ve had the priveledge of serving as a Team Lead, mentoring a team of wonderful developers along the Agile path.
                 </div>
 
-                <div className="relative flex flex-col gap-16 pl-20 timeline:pl-0 before:contents-[''] before:absolute before:left-6 timeline:before:left-auto timeline:before:right-1/2 timeline:before:mr-[7px] before:top-0 before:bottom-0 before:border-l-2 before:border-slate-500">
+                <div className="relative flex flex-col gap-16 pl-20 timeline:pl-0 before:contents-[''] before:absolute before:left-6 timeline:before:left-auto timeline:before:right-[60%] timeline:before:mr-[7px] before:top-0 before:bottom-0 before:border-l-2 before:border-slate-500">
                     <WorkSection>
                         <WorkIcon />
                         <WorkTitle title="Web Developer &ndash; Team Lead" timePeriod="2019 &ndash; current" />
