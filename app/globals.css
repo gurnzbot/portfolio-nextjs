@@ -6,6 +6,12 @@ html {
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "Inconsolata";
+    src: url("../public/fonts/inconsolata-webfont.woff");
+    font-weight: 500;
+}
+
 @keyframes cursor {
     0% {
         opacity: 1;
