@@ -1,8 +1,16 @@
+"use client";
+
+// * Components
 import ComputerWritingAnimation from "@/src/components/ComputerWritingAnimation";
 
+// * Utils
+import useSectionObserver from "@/src/hooks/useSectionObserver";
+
 function Intro() {
+    const { sectionRef } = useSectionObserver({ name: "intro" });
+
     return (
-        <div id="intro" className="flex flex-1 min-h-screen h-[800px] snap-start">
+        <div id="intro" ref={sectionRef} className="flex flex-1 min-h-screen h-[800px] snap-start">
             <header className="flex flex-1 flex-col justify-center items-center text-white bg-intro bg-center bg-cover bg-fixed">
                 <div className="flex w-full flex-col justify-center items-center bg-black/60 py-4 px-4">
                     <ComputerWritingAnimation text={`console.log("Hello world!");`} />
