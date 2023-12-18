@@ -1,3 +1,20 @@
+## [1.6.0](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.5.0...v1.6.0) (2023-12-18)
+
+
+### :sparkles: Features
+
+* implement intersectionObserver for nav active states ([c004a3e](https://github.com/gurnzbot/portfolio-nextjs/commit/c004a3ef8e79a5aed9a7b452c72e889b3ce68dda))
+
+
+### :bug: Bug Fixes
+
+* **contact:** accomodate for localStorage not being available server-side ([16f7bd4](https://github.com/gurnzbot/portfolio-nextjs/commit/16f7bd4097e4c5b20c4a7849cc0d54097a10cfb9))
+
+
+### :zap: Refactoring
+
+* **experience:** make description column larger ([945b57b](https://github.com/gurnzbot/portfolio-nextjs/commit/945b57b9cf05b511dc5d065af779420735e55982))
+
 ## [1.5.0](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.4.0...v1.5.0) (2023-12-17)
 
 
