@@ -1,3 +1,5 @@
+"use client";
+
 // * Components
 import CompanyTitle from "@/src/components/sections/Experience/CompanyTitle";
 import WorkDescription from "@/src/components/sections/Experience/WorkDescription";
@@ -5,9 +7,14 @@ import WorkIcon from "@/src/components/sections/Experience/WorkIcon";
 import WorkSection from "@/src/components/sections/Experience/WorkSection";
 import WorkTitle from "@/src/components/sections/Experience/WorkTitle";
 
+// * Utils
+import useSectionObserver from "@/src/hooks/useSectionObserver";
+
 function Experience() {
+    const { sectionRef } = useSectionObserver({ name: "experience", threshold: 0.4 });
+
     return (
-        <div id="experience" className="flex flex-1 justify-center min-h-screen py-20 px-14 sm:px-32 snap-start bg-slate-100">
+        <div id="experience" ref={sectionRef} className="flex flex-1 justify-center min-h-screen py-20 px-14 sm:px-32 snap-start bg-slate-100">
             <div className="flex flex-col gap-8 max-w-6xl">
                 <div>
                     <h5 className="text-3xl text-center text-amber-600 font-bold uppercase">My Experience</h5>

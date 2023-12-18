@@ -1,3 +1,5 @@
+"use client";
+
 // * Lib
 import Image from "next/image";
 import { FaGithub, FaStackOverflow } from "react-icons/fa";
@@ -9,9 +11,14 @@ import ContactLink from "@/src/components/sections/About/ContactLink";
 import OutlineButton from "@/src/components/buttons/OutlineButton";
 import FlatButton from "@/src/components/buttons/FlatButton";
 
+// * Utils
+import useSectionObserver from "@/src/hooks/useSectionObserver";
+
 function About() {
+    const { sectionRef } = useSectionObserver({ name: "about" });
+
     return (
-        <div id="about" className="flex flex-col min-h-screen py-20 px-14 sm:px-32 justify-center snap-start">
+        <div id="about" ref={sectionRef} className="flex flex-col min-h-screen py-20 px-14 sm:px-32 justify-center snap-start">
             <div className="flex flex-1 flex-col gap-4 max-w-6xl">
                 <div className="flex flex-col justify-center">
                     <h5 className="text-3xl text-center text-amber-600 font-bold uppercase">About</h5>

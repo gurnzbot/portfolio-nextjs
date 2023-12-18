@@ -9,7 +9,11 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import NavLink from "@/src/components/nav/NavLink";
 import NavIcon from "@/src/components/nav/NavIcon";
 
+// * Utils
+import { useScrollStore } from "@/src/store/ScrollStore";
+
 function Navigation() {
+    const { activeSection } = useScrollStore();
     const [dropdownShown, setDropdownShown] = useState(false);
 
     const toggleNavbar = () => {
@@ -26,16 +30,24 @@ function Navigation() {
                     <nav>
                         <ul className={`flex flex-col resp-nav:flex-row resp-nav:gap-8 overflow-hidden transition-max-height duration-300 ${dropdownShown ? "max-h-[400px]" : "max-h-0 resp-nav:max-h-none"}`}>
                             <li>
-                                <NavLink href="#intro">Intro</NavLink>
+                                <NavLink href="#intro" isActive={activeSection === "intro"}>
+                                    Intro
+                                </NavLink>
                             </li>
                             <li>
-                                <NavLink href="#about">About</NavLink>
+                                <NavLink href="#about" isActive={activeSection === "about"}>
+                                    About
+                                </NavLink>
                             </li>
                             <li>
-                                <NavLink href="#experience">Experience</NavLink>
+                                <NavLink href="#experience" isActive={activeSection === "experience"}>
+                                    Experience
+                                </NavLink>
                             </li>
                             <li className="[&>*]:pb-4 resp-nav:[&>*]:pb-2">
-                                <NavLink href="#contact">Contact</NavLink>
+                                <NavLink href="#contact" isActive={activeSection === "contact"}>
+                                    Contact
+                                </NavLink>
                             </li>
                         </ul>
                     </nav>

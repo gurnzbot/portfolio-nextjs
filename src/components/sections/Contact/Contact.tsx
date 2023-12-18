@@ -13,12 +13,15 @@ import FormInput from "@/src/components/sections/Contact/FormInput";
 // * Utils
 import { ContactFormSchema } from "@/src/utils/ContactFormSchema";
 import postContact from "@/src/actions/postContact";
+import useSectionObserver from "@/src/hooks/useSectionObserver";
 
 type Inputs = z.infer<typeof ContactFormSchema>;
 
 const submissionThresholdMinutes = 30;
 
 function Contact() {
+    const { sectionRef } = useSectionObserver({ name: "contact" });
+
     const [submitError, setSubmitError] = useState<string>();
     const [isLoading, setIsLoading] = useState(false);
 
@@ -69,7 +72,7 @@ function Contact() {
     };
 
     return (
-        <div id="contact" className="relative flex min-h-screen py-40 px-14 sm:px-32 justify-center snap-start bg-contact bg-cover bg-center bg-fixed text-white">
+        <div id="contact" ref={sectionRef} className="relative flex min-h-screen py-40 px-14 sm:px-32 justify-center snap-start bg-contact bg-cover bg-center bg-fixed text-white">
             <div className="absolute top-0 bottom-0 left-0 right-0 z-0 bg-black opacity-90" />
             <div className="flex flex-1 flex-col max-w-3xl z-10">
                 <div className="flex flex-col justify-center mb-16 lg:mb-10">
