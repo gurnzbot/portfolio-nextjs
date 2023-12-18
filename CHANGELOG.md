@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.6.0...v1.6.1) (2023-12-18)
+
+
+### :bug: Bug Fixes
+
+* **contact:** set timeout back to 30 min ([1896116](https://github.com/gurnzbot/portfolio-nextjs/commit/1896116f9782ec03870d58448d69f7cc76324878))
+
 ## [1.6.0](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.5.0...v1.6.0) (2023-12-18)
 
 
