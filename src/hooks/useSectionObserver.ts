@@ -13,12 +13,12 @@ function useSectionObserver({ name, threshold = 0.8 }: Props) {
     const { setActiveSection } = useScrollStore();
     const sectionRef = useRef<HTMLDivElement>(null);
 
-    const options: IntersectionObserverInit = {
-        rootMargin: "0px",
-        threshold,
-    };
-
     useEffect(() => {
+        const options: IntersectionObserverInit = {
+            rootMargin: "0px",
+            threshold,
+        };
+
         // Initialize observer, which will set the active section in the store if the section is intersecting
         const observer = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
             const [entry] = entries;
@@ -39,7 +39,7 @@ function useSectionObserver({ name, threshold = 0.8 }: Props) {
         return () => {
             observer.disconnect();
         };
-    }, [sectionRef.current, setActiveSection]);
+    }, [setActiveSection, name, threshold]);
 
     return { sectionRef };
 }
