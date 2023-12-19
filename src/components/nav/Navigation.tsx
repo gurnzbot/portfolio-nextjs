@@ -55,17 +55,17 @@ function Navigation() {
 
                 <ul className="flex gap-6">
                     <li className="flex">
-                        <NavIcon href="https://www.linkedin.com/in/erikgurney/">
+                        <NavIcon href="https://www.linkedin.com/in/erikgurney/" target="_blank" rel="noopener noreferrer">
                             <FaLinkedin />
                         </NavIcon>
                     </li>
                     <li className="flex">
-                        <NavIcon href="https://github.com/gurnzbot">
+                        <NavIcon href="https://github.com/gurnzbot" target="_blank" rel="noopener noreferrer">
                             <FaGithub />
                         </NavIcon>
                     </li>
                     <li className="flex">
-                        <NavIcon href="https://stackoverflow.com/users/1803539/gurnzbot">
+                        <NavIcon href="https://stackoverflow.com/users/1803539/gurnzbot" target="_blank" rel="noopener noreferrer">
                             <FaStackOverflow />
                         </NavIcon>
                     </li>
