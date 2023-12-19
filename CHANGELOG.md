@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.7.0...v1.7.1) (2023-12-19)
+
+
+### :bug: Bug Fixes
+
+* **contact:** email subject typo ([05a7f90](https://github.com/gurnzbot/portfolio-nextjs/commit/05a7f902ea65bf20172e40a0d9f245335f5a3224))
+
 ## [1.7.0](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.6.2...v1.7.0) (2023-12-19)
 
 
