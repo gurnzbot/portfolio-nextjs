@@ -26,7 +26,7 @@ const postContact = async (data: Inputs) => {
 
         // Send email!
         const emailResp = await resend.emails.send({
-            from: "Erik GUrney <onboarding@resend.dev>",
+            from: "Erik Gurney <onboarding@resend.dev>",
             // from: "contact@erikgurney.com",
             to: "erik.gurney@hotmail.com",
             reply_to: parsedData.data.email,
