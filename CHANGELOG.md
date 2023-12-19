@@ -1,3 +1,10 @@
+## [1.8.0](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.7.1...v1.8.0) (2023-12-19)
+
+
+### :sparkles: Features
+
+* implement vercel analytics ([dc19dd0](https://github.com/gurnzbot/portfolio-nextjs/commit/dc19dd080dc2d89ca42e795300458471c1f55daf))
+
 ## [1.7.1](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.7.0...v1.7.1) (2023-12-19)
 
 
