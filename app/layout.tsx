@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/app/globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
                 <link rel="manifest" href="/favicon/site.webmanifest"></link>
             </head>
-            <body className={inter.className}>{children}</body>
+            <body className={inter.className}>
+                {children}
+                <Analytics />
+            </body>
         </html>
     );
 }
