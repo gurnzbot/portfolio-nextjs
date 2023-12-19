@@ -1,3 +1,6 @@
+// Note: We could also set the url's hash when the user scrolls to a section, but the DOM wants to auto-scroll the user
+//       exactly to the top of the section, which leads to bad UX.  Hence, we aren't doing that.
+
 // * Lib
 import { useEffect, useRef } from "react";
 
@@ -24,7 +27,6 @@ function useSectionObserver({ name, threshold = 0.8 }: Props) {
             const [entry] = entries;
 
             if (entry.isIntersecting) {
-                window.location.hash = `#${name}`;
                 setActiveSection(name);
             }
         }, options);
