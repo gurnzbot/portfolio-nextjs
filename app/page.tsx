@@ -5,6 +5,7 @@ import Navigation from "@/src/components/nav/Navigation";
 import Experience from "@/src/components/sections/Experience/Experience";
 import Contact from "@/src/components/sections/Contact/Contact";
 import Footer from "@/src/components/sections/Footer";
+import ScrollToTop from "@/src/components/ScrollToTop";
 
 export default function Home() {
     return (
@@ -20,6 +21,8 @@ export default function Home() {
             <Experience />
             <Contact />
             <Footer />
+
+            <ScrollToTop />
         </main>
     );
 }
