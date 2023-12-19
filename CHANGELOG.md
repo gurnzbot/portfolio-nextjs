@@ -1,3 +1,22 @@
+## [1.6.2](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.6.1...v1.6.2) (2023-12-19)
+
+
+### :bug: Bug Fixes
+
+* **nav:** remove url hash change when user scrolls to section ([dd2e843](https://github.com/gurnzbot/portfolio-nextjs/commit/dd2e843c6b09a38368d132563a7d40484f07e6a9))
+* **scroll:** move intersection observer options inside useEffect ([26ae57d](https://github.com/gurnzbot/portfolio-nextjs/commit/26ae57d956dedb29aac8e769deb56b1a7212e300))
+
+
+### :barber: Styling
+
+* **fonts:** use Inconsolata as a locally loaded font ([e940baf](https://github.com/gurnzbot/portfolio-nextjs/commit/e940baf8340a9e205d0cbcd0ca1726529fc0016a))
+* remove unused "poppins" font ([b6f2caf](https://github.com/gurnzbot/portfolio-nextjs/commit/b6f2caf6051f72e74943b329fdd90094f3b93d45))
+
+
+### :zap: Refactoring
+
+* **nav:** open external links in new tab ([68a7c1a](https://github.com/gurnzbot/portfolio-nextjs/commit/68a7c1adae7890f6d5ed9527d3757b781be55544))
+
 ## [1.6.1](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.6.0...v1.6.1) (2023-12-18)
 
 
