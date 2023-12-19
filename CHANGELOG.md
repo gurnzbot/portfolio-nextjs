@@ -1,3 +1,11 @@
+## [1.7.0](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.6.2...v1.7.0) (2023-12-19)
+
+
+### :sparkles: Features
+
+* **footer:** implement footer ([1bdf567](https://github.com/gurnzbot/portfolio-nextjs/commit/1bdf56720c880b7fad6fd56eeca474dd52fa06dc))
+* **scroll:** implement scroll-to-top button ([78cbadf](https://github.com/gurnzbot/portfolio-nextjs/commit/78cbadf0a23f0fe7368a2cd053a3996b8775f6cf))
+
 ## [1.6.2](https://github.com/gurnzbot/portfolio-nextjs/compare/v1.6.1...v1.6.2) (2023-12-19)
 
 
