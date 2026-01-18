@@ -1,18 +1,24 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-    content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
+    content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
     theme: {
         extend: {
             fontFamily: {
-                inconsolata: ["Inconsolata"],
+                inconsolata: ["Inconsolata", "monospace"],
             },
             backgroundImage: {
                 intro: "url('/images/homepage-bg-min.png')",
                 contact: "url('/images/contact-bg.jpg')",
             },
+            keyframes: {
+                cursor: {
+                    "0%, 50%": { opacity: "1" },
+                    "51%, 100%": { opacity: "0" },
+                },
+            },
             animation: {
-                cursor: "cursor infinite 800ms",
+                cursor: "cursor 800ms infinite",
             },
             screens: {
                 xs: "383px",
@@ -26,4 +32,5 @@ const config: Config = {
     },
     plugins: [],
 };
+
 export default config;

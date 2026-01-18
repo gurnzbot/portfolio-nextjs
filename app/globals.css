@@ -1,25 +1,30 @@
-@tailwind base;
-html {
-    scroll-behavior: smooth;
-}
+@import "tailwindcss";
 
-@tailwind components;
-@tailwind utilities;
-
-@font-face {
-    font-family: "Inconsolata";
-    src: url("../public/fonts/inconsolata-webfont.woff");
-    font-weight: 500;
-}
-
-@keyframes cursor {
-    0% {
-        opacity: 1;
+/* Tell Tailwind where your custom CSS belongs */
+@layer base {
+    html {
+        scroll-behavior: smooth;
     }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
+
+    @font-face {
+        font-family: "Inconsolata";
+        src: url("/fonts/inconsolata-webfont.woff") format("woff");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
     }
 }
+/* 
+@layer utilities {
+    @keyframes cursor {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+} */
