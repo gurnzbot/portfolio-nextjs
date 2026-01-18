@@ -1,7 +1,7 @@
-import { AnchorHTMLAttributes } from "react";
+import { AnchorHTMLAttributes, ElementType } from "react";
 
 type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
-    Icon: JSX.ElementType;
+    Icon: ElementType;
     children: React.ReactNode;
 };
 

@@ -16,7 +16,7 @@ const postContact = async (data: Inputs) => {
     if (!parsedData.success) {
         return {
             success: false,
-            error: parsedData.error.format(),
+            error: z.treeifyError(parsedData.error),
         };
     }
 
@@ -24,14 +24,17 @@ const postContact = async (data: Inputs) => {
         // Initialize Resend
         const resend = new Resend(process.env.RESEND_API_KEY);
 
+        // Await the EmailTemplate
+        const emailTemplate = await EmailTemplate(parsedData.data);
+
         // Send email!
         const emailResp = await resend.emails.send({
             from: "Erik Gurney <onboarding@resend.dev>",
             // from: "contact@erikgurney.com",
             to: "erik.gurney@hotmail.com",
-            reply_to: parsedData.data.email,
+            replyTo: parsedData.data.email,
             subject: `Contact | erikgurney.com: ${parsedData.data.name}`,
-            react: EmailTemplate(parsedData.data),
+            react: emailTemplate,
             text: `${parsedData.data.name}\n${parsedData.data.email}\n${parsedData.data.message}`,
         });
 
