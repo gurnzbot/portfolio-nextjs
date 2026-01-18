@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+    --breakpoint-xs: 383px;
+    --breakpoint-resp-nav: 630px;
+    --breakpoint-timeline: 900px;
+}
+
 /* Tell Tailwind where your custom CSS belongs */
 @layer base {
     html {
@@ -7,14 +13,26 @@
     }
 
     @font-face {
-        font-family: "Inconsolata";
-        src: url("/fonts/inconsolata-webfont.woff") format("woff");
+        font-family: "inconsolata";
+        src: url("/fonts/inconsolata-webfont.woff2") format("woff2");
         font-weight: 500;
         font-style: normal;
         font-display: swap;
     }
 }
-/* 
+
+@utility bg-intro {
+    background-image: url("/images/homepage-bg-min.png");
+}
+
+@utility bg-contact {
+    background-image: url("/images/contact-bg.jpg");
+}
+
+@utility font-inconsolata {
+    font-family: "Inconsolata", monospace;
+}
+
 @layer utilities {
     @keyframes cursor {
         0% {
@@ -27,4 +45,8 @@
             opacity: 1;
         }
     }
-} */
+}
+
+@utility animate-cursor {
+    animation: cursor 1s infinite;
+}

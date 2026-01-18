@@ -26,8 +26,8 @@ function About() {
                 </div>
 
                 <div className="flex flex-col lg:flex-row gap-8">
-                    <div className="flex lg:w-1/6 min-w-[100px] lg:min-w-[150px] lg:pt-28 justify-center items-start">
-                        <Image className="w-[150px] lg:w-full rounded-[100%] overflow-hidden bg-cover border-2 border-slate-500" src="/images/erik-avatar.jpg" alt="Erik GUrney" width={215} height={215} />
+                    <div className="flex lg:w-1/6 min-w-25 lg:min-w-37.5 lg:pt-28 justify-center items-start">
+                        <Image className="w-37.5 lg:w-full rounded-[100%] overflow-hidden bg-cover border-2 border-slate-500" src="/images/erik-avatar.jpg" alt="Erik GUrney" width={215} height={215} />
                     </div>
                     <div className="flex-1">
                         <div className="flex flex-col gap-4 pt-6 text-xl text-slate-500 leading-8 text-center xs:text-justify">
