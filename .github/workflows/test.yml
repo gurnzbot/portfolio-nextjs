@@ -9,10 +9,10 @@ jobs:
     cache_npm:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3.5.3
+            - uses: actions/checkout@v6.0.1
             - name: Cache node modules
               id: cache-npm
-              uses: actions/cache@v3.3.1
+              uses: actions/cache@v5.0.2
               with:
                   # npm cache files are stored in `node_modules` on Linux/macOS
                   path: |
@@ -38,10 +38,10 @@ jobs:
             matrix:
                 node-version: [16]
         steps:
-            - uses: actions/checkout@v3.5.3
+            - uses: actions/checkout@v6.0.1
             - name: Setup node
-              uses: actions/setup-node@v3.7.0
-            - uses: actions/cache@v3.3.1
+              uses: actions/setup-node@v6.2.0
+            - uses: actions/cache@v5.0.2
               with:
                   path: |
                       node_modules
