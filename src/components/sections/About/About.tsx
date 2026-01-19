@@ -18,7 +18,7 @@ function About() {
     const { sectionRef } = useSectionObserver({ name: "about" });
 
     return (
-        <div id="about" ref={sectionRef} className="flex flex-col min-h-screen py-20 px-14 sm:px-32 justify-center snap-start">
+        <div id="about" ref={sectionRef} className="flex flex-col min-h-screen py-20 px-14 sm:px-32 justify-center items-center snap-start">
             <div className="flex flex-1 flex-col gap-4 max-w-6xl">
                 <div className="flex flex-col justify-center">
                     <h5 className="text-3xl text-center text-amber-600 font-bold uppercase">About</h5>
@@ -26,8 +26,8 @@ function About() {
                 </div>
 
                 <div className="flex flex-col lg:flex-row gap-8">
-                    <div className="flex lg:w-1/6 min-w-[100px] lg:min-w-[150px] lg:pt-28 justify-center items-start">
-                        <Image className="w-[150px] lg:w-full rounded-[100%] overflow-hidden bg-cover border-2 border-slate-500" src="/images/erik-avatar.jpg" alt="Erik GUrney" width={215} height={215} />
+                    <div className="flex lg:w-1/6 min-w-25 lg:min-w-37.5 lg:pt-28 justify-center items-start">
+                        <Image className="w-37.5 lg:w-full rounded-[100%] overflow-hidden bg-cover border-2 border-slate-500" src="/images/erik-avatar.jpg" alt="Erik GUrney" width={215} height={215} />
                     </div>
                     <div className="flex-1">
                         <div className="flex flex-col gap-4 pt-6 text-xl text-slate-500 leading-8 text-center xs:text-justify">

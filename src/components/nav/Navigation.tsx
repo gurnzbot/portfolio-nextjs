@@ -28,7 +28,7 @@ function Navigation() {
                         <GiHamburgerMenu />
                     </button>
                     <nav>
-                        <ul className={`flex flex-col resp-nav:flex-row resp-nav:gap-8 overflow-hidden transition-max-height duration-300 ${dropdownShown ? "max-h-[400px]" : "max-h-0 resp-nav:max-h-none"}`}>
+                        <ul className={`flex flex-col resp-nav:flex-row resp-nav:gap-8 overflow-hidden transition-[max-height] duration-300 ${dropdownShown ? "max-h-100" : "max-h-0 resp-nav:max-h-none"}`}>
                             <li>
                                 <NavLink href="#intro" isActive={activeSection === "intro"}>
                                     Intro
@@ -44,7 +44,7 @@ function Navigation() {
                                     Experience
                                 </NavLink>
                             </li>
-                            <li className="[&>*]:pb-4 resp-nav:[&>*]:pb-2">
+                            <li className="*:pb-4 resp-nav:[&>*]:pb-2">
                                 <NavLink href="#contact" isActive={activeSection === "contact"}>
                                     Contact
                                 </NavLink>

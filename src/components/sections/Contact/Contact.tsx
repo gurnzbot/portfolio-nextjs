@@ -1,7 +1,7 @@
 "use client";
 
 // * Lib
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
@@ -14,7 +14,6 @@ import FormInput from "@/src/components/sections/Contact/FormInput";
 import { ContactFormSchema } from "@/src/utils/ContactFormSchema";
 import postContact from "@/src/actions/postContact";
 import useSectionObserver from "@/src/hooks/useSectionObserver";
-import Spinner from "../../Spinner";
 
 type Inputs = z.infer<typeof ContactFormSchema>;
 
@@ -26,29 +25,16 @@ function Contact() {
     const [submitError, setSubmitError] = useState<string>();
     const [isLoading, setIsLoading] = useState(false);
 
-    const [lastSubmissionTime, setLastSubmissionTime] = useState(0);
-    const [isInitializing, setIsInitializing] = useState(true);
+    const [lastSubmissionTime, setLastSubmissionTime] = useState(() => {
+        if (typeof window === "undefined") return 0;
+        return parseInt(localStorage.getItem("lastSubmissionTime") || "0", 10);
+    });
     const currentTime = new Date().getTime();
     const canSubmit = currentTime - lastSubmissionTime >= submissionThresholdMinutes * 60 * 1000;
 
-    // Set intial last submission time
-    useEffect(() => {
-        setLastSubmissionTime(parseInt(localStorage.getItem("lastSubmissionTime") || "0"));
-    }, []);
-
-    // Set transition styles when canSubmit changes
-    useEffect(() => {
-        setFormAnimationClasses(canSubmit ? "opacity-100 z-10" : "opacity-0");
-        setMessageAnimationClasses(canSubmit ? "opacity-0 -translate-y-2 -z-10" : "opacity-100 translate-y-0");
-
-        if (isInitializing) {
-            setIsInitializing(false);
-        }
-    }, [isInitializing, canSubmit]);
-
-    // This state will hold the classes necessary to animate/transition the form and success message
-    const [formAnimationClasses, setFormAnimationClasses] = useState("opacity-0");
-    const [messageAnimationClasses, setMessageAnimationClasses] = useState("opacity-0");
+    // Animation classes
+    const formAnimationClasses = canSubmit ? "opacity-100 z-10" : "opacity-0";
+    const messageAnimationClasses = canSubmit ? "opacity-0 -translate-y-2 -z-10" : "opacity-100 translate-y-0";
 
     const {
         register,
@@ -93,12 +79,6 @@ function Contact() {
                     <h2 className="text-3xl text-center text-amber-500 font-bold uppercase">Contact</h2>
                     <h2 className="font-inconsolata text-3xl sm:text-xl text-center text-slate-300 tracking-tighter">I&apos;d love to hear from you!</h2>
                 </div>
-
-                {isInitializing && (
-                    <div className="flex justify-center opacity-75 mt-10">
-                        <Spinner w="w-12" />
-                    </div>
-                )}
 
                 <div className="relative">
                     <form onSubmit={handleSubmit(submitForm)} className={`flex flex-col gap-12 transition-all duration-300 ease-in-out ${formAnimationClasses}`}>
