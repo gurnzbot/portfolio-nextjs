@@ -10,7 +10,7 @@ type State = {
 export const useScrollStore = create<State>(set => ({
     activeSection: "intro",
     setActiveSection: section =>
-        set(_ => ({
+        set(() => ({
             activeSection: section,
         })),
 }));
